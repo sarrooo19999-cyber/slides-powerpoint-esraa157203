@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>من الفكرة إلى إطلاق موقعك الإلكتروني</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #080d1b;
+    color: white;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    min-height: 100vh;
+    padding: 60px 10%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    background:
+        radial-gradient(circle at top left, #24245a 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #172e50 0%, transparent 40%),
+        #080d1b;
+}
+
+.slide.active {
+    display: flex;
+    animation: appear 0.5s ease;
+}
+
+@keyframes appear {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.number {
+    color: #a78bfa;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 65px);
+    font-weight: 900;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: clamp(27px, 4vw, 45px);
+    color: #c4b5fd;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: clamp(18px, 2vw, 23px);
+    line-height: 2;
+    color: #d1d5e5;
+    max-width: 850px;
+}
+
+.highlight {
+    color: #a78bfa;
+}
+
+.icon {
+    font-size: 75px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(167,139,250,0.3);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 25px;
+    max-width: 850px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.card p {
+    font-size: 19px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 850px;
+    margin-top: 25px;
+}
+
+.step {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid #34365e;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.code {
+    background: #111827;
+    color: #a7f3d0;
+    padding: 20px;
+    border-radius: 12px;
+    direction: ltr;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 2;
+    width: 100%;
+    max-width: 700px;
+}
+
+.navigation {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+button {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #a78bfa;
+    transform: translateY(-3px);
+}
+
+#counter {
+    color: #c4b5fd;
+    font-size: 16px;
+}
+
+.progress {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 5px;
+    background: #7c3aed;
+    width: 0%;
+    transition: 0.3s;
+    z-index: 20;
+}
+
+.footer {
+    position: absolute;
+    bottom: 100px;
+    color: #8589a8;
+    font-size: 14px;
+}
+
+@media(max-width: 600px) {
+    .slide {
+        padding: 35px 6%;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation {
+        bottom: 18px;
+        gap: 10px;
+    }
+
+    button {
+        padding: 9px 18px;
+        font-size: 14px;
+    }
+
+    .footer {
+        bottom: 85px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- الشريحة 1 -->
+<section class="slide active">
+    <div class="icon">🌐</div>
+    <div class="number">عرض تقديمي تفاعلي</div>
+    <h1>من الفكرة إلى <span class="highlight">إطلاق موقعك الإلكتروني</span></h1>
+    <p>رحلة عملية توضح المراحل الأساسية لإنشاء موقع إلكتروني وتجهيزه ونشره على الإنترنت.</p>
+    <div class="card">
+        <p>إعداد وتصميم: <strong class="highlight">إسراء ناصر</strong></p>
+    </div>
+</section>
+
+<!-- الشريحة 2 -->
+<section class="slide">
+    <div class="icon">🎯</div>
+    <div class="number">الخطوة 01</div>
+    <h2>تحديد الهدف من المشروع</h2>
+    <p>قبل البدء في إنشاء الموقع، يجب تحديد فكرته والهدف الأساسي منه، ومعرفة الجمهور المستهدف والخدمات أو المعلومات التي سيقدمها.</p>
+    <div class="steps">
+        <div class="step">تحديد فكرة الموقع</div>
+        <div class="step">تحديد الجمهور المستهدف</div>
+        <div class="step">تحديد الصفحات المطلوبة</div>
+        <div class="step">تحديد شكل الموقع ووظيفته</div>
+    </div>
+</section>
+
+<!-- الشريحة 3 -->
+<section class="slide">
+    <div class="icon">✍️</div>
+    <div class="number">الخطوة 02</div>
+    <h2>تجهيز محتوى المشروع (Prompt)</h2>
+    <p>نكتب وصفًا واضحًا ومفصلًا للموقع المطلوب، يتضمن التصميم والألوان والأقسام والوظائف، ثم نستخدمه مع أدوات الذكاء الاصطناعي للمساعدة في بناء الموقع.</p>
+    <div class="card">
+        <p><strong class="highlight">مثال على البرومبت:</strong></p>
+        <p>أنشئ موقعًا إلكترونيًا احترافيًا ومتجاوبًا، بتصميم عصري، مع صفحة رئيسية وأقسام واضحة وألوان متناسقة.</p>
+    </div>
+</section>
+
+<!-- الشريحة 4 -->
+<section class="slide">
+    <div class="icon">📁</div>
+    <div class="number">الخطوة 03</div>
+    <h2>إنشاء مستودع المشروع</h2>
+    <p>ننشئ مستودعًا (Repository) على منصة GitHub لحفظ ملفات المشروع وتنظيمها، ومتابعة التعديلات عليها.</p>
+    <div class="steps">
+        <div class="step">الدخول إلى GitHub</div>
+        <div class="step">اختيار New Repository</div>
+        <div class="step">كتابة اسم المستودع</div>
+        <div class="step">الضغط على Create Repository</div>
+    </div>
+</section>
+
+<!-- الشريحة 5 -->
+<section class="slide">
+    <div class="icon">💻</div>
+    <div class="number">الخطوة 04</div>
+    <h2>تجهيز ملفات موقع المشروع</h2>
+    <p>نجهز ملفات الموقع وننظمها داخل مجلد المشروع، بحيث يكون لكل ملف وظيفة محددة.</p>
+    <div class="code">
+        my-website/<br>
+        ├── index.html<br>
+        ├── assets/<br>
+        │&nbsp;&nbsp; ├── css/<br>
+        │&nbsp;&nbsp; │&nbsp;&nbsp; └── style.css<br>
+        │&nbsp;&nbsp; └── js/<br>
+        │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── slides.js<br>
+        └── images/
+    </div>
+</section>
+
+<!-- الشريحة 6 -->
+<section class="slide">
+    <div class="icon">☁️</div>
+    <div class="number">الخطوة 05</div>
+    <h2>رفع ملفات المشروع إلى المستودع</h2>
+    <p>بعد الانتهاء من تجهيز الملفات، نرفعها إلى مستودع GitHub حتى تصبح محفوظة على الإنترنت وجاهزة للربط بمنصة الاستضافة.</p>
+    <div class="steps">
+        <div class="step">فتح المستودع على GitHub</div>
+        <div class="step">اختيار Add File</div>
+        <div class="step">اختيار Upload Files</div>
+        <div class="step">رفع الملفات والضغط على Commit Changes</div>
+    </div>
+</section>
+
+<!-- الشريحة 7 -->
+<section class="slide">
+    <div class="icon">🔗</div>
+    <div class="number">الخطوة 06</div>
+    <h2>ربط المستودع بحساب الاستضافة</h2>
+    <p>نربط مستودع GitHub بمنصة استضافة مثل Netlify أو Vercel، حتى تتمكن المنصة من الوصول إلى ملفات المشروع وتجهيزها للنشر.</p>
+    <div class="card">
+        <p>نختار إضافة مشروع جديد، ثم نربط حساب GitHub، ونحدد المستودع الذي يحتوي على ملفات الموقع.</p>
+    </div>
+</section>
+
+<!-- الشريحة 8 -->
+<section class="slide">
+    <div class="icon">🚀</div>
+    <div class="number">الخطوة 07</div>
+    <h2>نشر المشروع</h2>
+    <p>بعد ربط المستودع وإعدادات النشر، نضغط على Deploy لتبدأ منصة الاستضافة بنشر الموقع وإتاحته عبر الإنترنت.</p>
+    <div class="card">
+        <p><strong class="highlight">النتيجة:</strong></p>
+        <p>الحصول على رابط إلكتروني يمكن فتحه ومشاركة الموقع من خلاله.</p>
+    </div>
+</section>
+
+<!-- الشريحة 9 -->
+<section class="slide">
+    <div class="icon">🌍</div>
+    <div class="number">الخطوة 08</div>
+    <h2>حجز دومين للموقع</h2>
+    <p>نحجز اسم نطاق (Domain) مناسبًا يعبر عن الموقع، ثم نربطه بمنصة الاستضافة ليصبح للموقع عنوان خاص وسهل التذكر.</p>
+    <div class="card">
+        <p><strong class="highlight">مثال:</strong></p>
+        <p dir="ltr">www.mywebsite.com</p>
+        <br>
+        <p>وبذلك تكتمل رحلة إنشاء الموقع من الفكرة إلى الإطلاق.</p>
+        <h2 style="margin-top:20px;">شكرًا لحسن المتابعة ✨</h2>
+    </div>
+</section>
+
+<div class="navigation">
+    <button onclick="nextSlide()">التالي ←</button>
+    <span id="counter">1 / 9</span>
+    <button onclick="prevSlide()">→ السابق</button>
+</div>
+
+<div class="progress" id="progress"></div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const counter = document.getElementById("counter");
+const progress = document.getElementById("progress");
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+
+    slides[index].classList.add("active");
+
+    counter.textContent = (index + 1) + " / " + slides.length;
+
+    progress.style.width = ((index + 1) / slides.length * 100) + "%";
+}
+
+function nextSlide() {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+}
+
+function prevSlide() {
+    if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowLeft" || event.key === " ") {
+        nextSlide();
+    }
+
+    if (event.key === "ArrowRight") {
+        prevSlide();
+    }
+});
+
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>
